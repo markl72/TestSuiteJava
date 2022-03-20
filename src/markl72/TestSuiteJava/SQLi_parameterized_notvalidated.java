@@ -55,14 +55,14 @@ public class SQLi_parameterized_notvalidated extends HttpServlet {
 			Class.forName("com.mysql.jdbc.Driver");  
 			Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/insecureapp","insecureapp","45EUlZOpL7");  
 			
-			String sql = "SELECT * from users WHERE userid=? AND password=?";
+			String sql = "SELECT * FROM users WHERE userid=? AND password=?";
 			
         	out.println("<p><b>SQL:</b> " + sql + "</p>");
         	out.println("<p><b>Results:</b></p>");
   
-			PreparedStatement pstmt = connection.prepareStatement("SELECT * from users WHERE userid=? AND password=?");
-			pstmt.setString(1, userid);
-			pstmt.setString(2,  password);
+			PreparedStatement pstmt = connection.prepareStatement(sql);
+			pstmt.setString(1,userid);
+			pstmt.setString(2,password);
             ResultSet rs = pstmt.executeQuery(sql);  
             
             while(rs.next()) {
