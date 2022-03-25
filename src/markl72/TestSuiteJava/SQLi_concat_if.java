@@ -53,6 +53,9 @@ public class SQLi_concat_if extends HttpServlet {
 		if(userid.equals("aa")) {
 			
 		}
+		if(password.equals("bb")) {
+			
+		}
 		
 		try {
 			
