@@ -30,11 +30,20 @@
 
   <servlet>
     <servlet-name>SQLi3</servlet-name>
-    <servlet-class>markl72.TestSuiteJava.SQLi_parameterized_notvalidated</servlet-class>
+    <servlet-class>markl72.TestSuiteJava.SQLi_concat_if</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>SQLi3</servlet-name>
     <url-pattern>/SQLi3/*</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>SQLi4</servlet-name>
+    <servlet-class>markl72.TestSuiteJava.SQLi_parameterized_notvalidated</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SQLi4</servlet-name>
+    <url-pattern>/SQLi4/*</url-pattern>
   </servlet-mapping>
   
   <welcome-file-list>
